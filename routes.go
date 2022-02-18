@@ -94,3 +94,14 @@ func streamRoom(c *gin.Context) {
 		return true
 	})
 }
+
+type JsonMessage struct {
+	Message string `json:"message"`
+}
+
+func json(c *gin.Context) {
+	data := JsonMessage{
+		Message: "json_data",
+	}
+	c.JSON(http.StatusOK, data)
+}
