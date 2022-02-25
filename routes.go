@@ -101,7 +101,7 @@ type JsonMessage struct {
 
 func json(c *gin.Context) {
 	data := JsonMessage{
-		Message: "json_data",
+		Message: "OK",
 	}
 	c.JSON(http.StatusOK, data)
 }
